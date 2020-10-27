@@ -4,7 +4,7 @@
     Building a full React application
   </strong>
   <p>
-    The React and JavaScript ecosystem is full of tools and libraries to help
+    The React and JavaScript Eecosystem is full of tools and libraries to help
     you build your applications. In this (huge) workshop we’ll build an
     application from scratch using widely supported and proven tools and
     techniques. We’ll cover everything about building frontend React
