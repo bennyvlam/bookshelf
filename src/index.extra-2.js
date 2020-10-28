@@ -9,7 +9,7 @@ function LoginForm({onSubmit, buttonText}) {
     event.preventDefault()
     const {username, password} = event.target.elements
 
-    onSubmit({
+    onSubmsit({
       username: username.value,
       password: password.value,
     })

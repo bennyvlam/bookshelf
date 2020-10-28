@@ -1,21 +1,31 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Logo } from './components/logo'
-import { Dialog, DialogOverlay, DialogContent } from '@reach/dialog'
+import { Dialog } from '@reach/dialog'
 import '@reach/dialog/styles.css'
 
 function LoginForm({ onSubmit, buttonText }) {
+  function handleSubmit(event) {
+    event.preventDefault()
+    const {username, password} = event.target.elements
+
+    onSubmit({
+      username: username.value,
+      password: password.value
+    })
+  }
+
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="usernameInput">Username:</label>
-        <input></input>
+        <input id="username" type="text"></input>
       </div>
       <div>
         <label htmlFor="passwordInput">Password:</label>
-        <input></input>
+        <input id="password" type="password"></input>
       </div>
-      <button>{buttonText}</button>
+      <button type="submit">{buttonText}</button>
     </form>
   )
 }
