@@ -1,28 +1,35 @@
-// 🐨 you'll need to import React and ReactDOM up here
 import React from 'react'
 import ReactDOM from 'react-dom'
-// 🐨 you'll also need to import the Logo component from './components/logo'
 import { Logo } from './components/logo'
+import { Dialog, DialogOverlay, DialogContent } from '@reach/dialog'
+import '@reach/dialog/styles.css'
 
-// 🐨 create an App component here and render the logo, the title ("Bookshelf"), a login button, and a register button.
-// 🐨 for fun, you can add event handlers for both buttons to alert that the button was clicked
 function App() {
+    const [openModal, setOpenModal] = React.useState('none')
 
     function handleLogin() {
-        alert('login clicked')
+        setOpenModal('login')
     }
 
     const handleRegister = () => {
-        alert('register clicked')
+        setOpenModal('register')
     }
 
     return (
-        <>
+        <div>
             <Logo width="80" height="80"></Logo>
             <h1>Bookshelf</h1>
             <div><button onClick={handleLogin}>Login</button></div>
             <div><button onClick={handleRegister}>Register</button></div>
-        </>
+            <Dialog aria-label="Login form" isOpen={openModal === 'login'}>
+                <button onClick={() => setOpenModal('none')}>Close</button>
+                <h3>Login</h3>
+            </Dialog>
+            <Dialog aria-label="Register form" isOpen={openModal === 'register'}>
+                <button onClick={() => setOpenModal('none')}>Close</button>
+                <h3>Register</h3>
+            </Dialog>
+        </div>
     )
 }
 
