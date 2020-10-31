@@ -179,7 +179,8 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/12884134?v=4",
       "profile": "https://github.com/milamer",
       "contributions": [
-        "code"
+        "code",
+        "bug"
       ]
     },
     {
@@ -226,6 +227,25 @@
       "profile": "https://github.com/komisz",
       "contributions": [
         "bug"
+      ]
+    },
+    {
+      "login": "MichaelDeBoey",
+      "name": "Michaël De Boey",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/6643991?v=4",
+      "profile": "https://michaeldeboey.be",
+      "contributions": [
+        "projectManagement",
+        "code"
+      ]
+    },
+    {
+      "login": "marcosvega91",
+      "name": "Marco Moretti",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5365582?v=4",
+      "profile": "https://github.com/marcosvega91",
+      "contributions": [
+        "code"
       ]
     }
   ],
